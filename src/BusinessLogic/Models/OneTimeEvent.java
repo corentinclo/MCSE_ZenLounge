@@ -1,5 +1,6 @@
-
 package BusinessLogic.Models;
+
+import java.sql.Timestamp;
 
 /**
  */
@@ -7,15 +8,37 @@ public class OneTimeEvent extends BusinessLogic.Models.Event {
 
 /**
  */
-    private final java.sql.Timestamp duration;
+    private Timestamp durationOTE;
+
 /**
  */
-    public BusinessLogic.Models.Date date;
+    private int dateOTE;
 
 /**
  * @return 
  */
-    public java.sql.Timestamp getDuration() {        
-        return duration;
-    } 
+    public Timestamp getDurationOTE() {
+        return durationOTE;
+    }
+
+/**
+ * @param _durationOTE 
+ */
+    public void setDurationOTE(Timestamp _durationOTE) {
+        durationOTE = _durationOTE;
+    }
+
+/**
+ * @return 
+ */
+    public int getDateOTE() {
+        return dateOTE;
+    }
+
+/**
+ * @param _dateOTE 
+ */
+    public void setDateOTE(int _dateOTE) {
+        dateOTE = _dateOTE;
+    }
  }
