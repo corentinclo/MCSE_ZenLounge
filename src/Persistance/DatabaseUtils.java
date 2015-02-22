@@ -1,67 +1,77 @@
-
 package Persistance;
 
-/**
- */
-public class DatabaseUtils {
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 /**
  */
-    private static String server;
+public abstract class DatabaseUtils {
 
-/**
+	private static Connection conn;
+	
+	private final static String server = "sql.free.fr";
+	private final static String login = "mcse.zenlounge";
+	private final static String password = ProtectedConfigFile.getPassword(1);
+	
+	public static void main(String[] args) {
+		connexion();
+	}
+	
+	/**
  */
-    private static String login;
+	public static void connexion() {
+		
+		try {
+			Class.forName("org.postgresql.Driver");
+			System.out.println("Driver O.K.");
 
-/**
- */
-    private static String password;
+			conn = DriverManager.getConnection(server, login, password);
+			System.out.println("Connexion effective !");
 
-/**
- */
-    public static void connexion() {        
-        // your code here
-    } 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
-/**
+	/**
  */
-    public static void deconnexion() {        
-        // your code here
-    } 
+	public static void deconnexion() {
+		// your code here
+	}
 
-/**
- * @param request 
- * @return 
- */
-    public static Object select(String request) {        
-        // your code here
-        return null;
-    } 
+	/**
+	 * @param request
+	 * @return
+	 */
+	public static Object select(String request) {
+		// your code here
+		return null;
+	}
 
-/**
- * @param request 
- * @return 
- */
-    public static boolean update(String request) {        
-        // your code here
-        return false;
-    } 
+	/**
+	 * @param request
+	 * @return
+	 */
+	public static boolean update(String request) {
+		// your code here
+		return false;
+	}
 
-/**
- * @param request 
- * @return 
- */
-    public static boolean delete(String request) {        
-        // your code here
-        return false;
-    } 
+	/**
+	 * @param request
+	 * @return
+	 */
+	public static boolean delete(String request) {
+		// your code here
+		return false;
+	}
 
-/**
- * @param request 
- * @return 
- */
-    public static boolean insert(String request) {        
-        // your code here
-        return false;
-    } 
- }
+	/**
+	 * @param request
+	 * @return
+	 */
+	public static boolean insert(String request) {
+		// your code here
+		return false;
+	}
+}
