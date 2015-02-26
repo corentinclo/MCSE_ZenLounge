@@ -26,10 +26,9 @@ public abstract class UserManagement {
     	String prefix = null;
     	String sufix = null;
 		try {
-			prefix = new String(random.generateSeed(8),"UTF-8");
-			sufix = new String(random.generateSeed(8),"UTF-8");
+			prefix = new String(random.generateSeed(8),"UTF-16");
+			sufix = new String(random.generateSeed(8),"UTF-16");
 			cryptPassword = cryptPassword(password,prefix,sufix);
-			System.out.println(cryptPassword);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {
@@ -37,14 +36,14 @@ public abstract class UserManagement {
 		}
 		
     	User newUser = new User(-1,id,lastName,firstName,mail,tel,cryptPassword,prefix,sufix);
-    	//newUser.store();
+    	newUser.store();
     } 
     
     public static String cryptPassword(String password,String prefix, String sufix) throws NoSuchAlgorithmException, UnsupportedEncodingException{
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		md.update((prefix+password+sufix).getBytes());
 		md.digest();
-    	return new String(md.digest(), "UTF-8");
+    	return new String(md.digest(), "UTF-16");
     }
 
 }
