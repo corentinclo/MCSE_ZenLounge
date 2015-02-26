@@ -1,84 +1,55 @@
 
 package BusinessLogic.Models;
 
-/**
- * 
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm78d4]
- */
+import java.util.Collection;
+import java.util.TreeSet;
+
+
 public class User {
 
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [Im7ddd0dam14b7d2676e5mm7805]
- */
     private final int numUser;
-
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm78aa]
- */
+    
     private String idUser;
 
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm7815]
- */
     private String mailUser;
 
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm78bb]
- */
     private String nameUser;
 
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm7899]
- */
-    private String firsNameUser;
+    private String firstNameUser;
 
-/**
- * <p>Represents ...</p>
- * 
- * @poseidon-object-id [I1f0ad7acm14b7d148c3cmm77c4]
- */
     private String telUser;
 
-/**
- */
     private String passwordUser;
 
-/**
- */
     private final String prefixUser;
 
-/**
- */
     private final String sufixUser;
-/**
- */
-    public BusinessLogic.Models.Order order;
-/**
- */
-    public java.util.Collection shoppingCart = new java.util.TreeSet();
-/**
- */
-    public BusinessLogic.Models.NotificationCenter notificationCenter;
-/**
- */
-    public java.util.Collection activite = new java.util.TreeSet();
 
+    public BusinessLogic.Models.Order order;
+
+    public Collection shoppingCart = new TreeSet();
+
+    public BusinessLogic.Models.NotificationCenter notificationCenter;
+
+    public Collection activite = new TreeSet();
+
+    public User(int num,String id, String lastName, String firstName, String mail, String tel, String password, String sufix, String prefix){
+    	nameUser = lastName;
+    	firstNameUser = firstName;
+    	mailUser=mail;
+    	telUser = tel;
+    	passwordUser=password;
+    	prefixUser = prefix;
+    	sufixUser = sufix;
+    	idUser = id;
+    	numUser = num;
+    }
+    
 /**
  * @return 
  */
     public Boolean store() {        
-        // your code here
+    	
         return null;
     } 
 
