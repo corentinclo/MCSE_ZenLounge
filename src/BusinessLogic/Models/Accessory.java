@@ -15,6 +15,10 @@ public class Accessory {
 /**
  * @return 
  */
+    public Accessory() {
+    	wordingAcc=0;
+    }
+    
     public int getWordingAcc() {        
         return wordingAcc;
     } 
