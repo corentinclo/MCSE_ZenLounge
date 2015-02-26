@@ -23,12 +23,12 @@ import java.awt.Window.Type;
 import javax.swing.JPasswordField;
 
 public class Register extends JFrame implements Views.AbstractView {
-	private JTextField textField;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JPasswordField passwordField;
+	private JTextField userName;
+	private JTextField firstName;
+	private JTextField lastName;
+	private JTextField mail;
+	private JTextField phone;
+	private JPasswordField password;
 
 /**
  */
@@ -75,10 +75,10 @@ public void hide() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(220, 11, 86, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		userName = new JTextField();
+		userName.setBounds(220, 11, 86, 20);
+		getContentPane().add(userName);
+		userName.setColumns(10);
 		
 		JLabel lblId = new JLabel("Username");
 		lblId.setHorizontalAlignment(SwingConstants.CENTER);
@@ -90,40 +90,40 @@ public void hide() {
 		lblPassword.setBounds(146, 45, 64, 14);
 		getContentPane().add(lblPassword);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(220, 73, 86, 20);
-		getContentPane().add(textField_2);
+		firstName = new JTextField();
+		firstName.setColumns(10);
+		firstName.setBounds(220, 73, 86, 20);
+		getContentPane().add(firstName);
 		
 		JLabel lblName = new JLabel("First name");
 		lblName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblName.setBounds(146, 76, 64, 14);
 		getContentPane().add(lblName);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(220, 104, 86, 20);
-		getContentPane().add(textField_3);
+		lastName = new JTextField();
+		lastName.setColumns(10);
+		lastName.setBounds(220, 104, 86, 20);
+		getContentPane().add(lastName);
 		
 		JLabel lblLastName = new JLabel("Last name");
 		lblLastName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLastName.setBounds(146, 107, 64, 14);
 		getContentPane().add(lblLastName);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(220, 135, 86, 20);
-		getContentPane().add(textField_4);
+		mail = new JTextField();
+		mail.setColumns(10);
+		mail.setBounds(220, 135, 86, 20);
+		getContentPane().add(mail);
 		
 		JLabel lblEmail = new JLabel("E-mail");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEmail.setBounds(146, 138, 64, 14);
 		getContentPane().add(lblEmail);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(220, 166, 86, 20);
-		getContentPane().add(textField_5);
+		phone = new JTextField();
+		phone.setColumns(10);
+		phone.setBounds(220, 166, 86, 20);
+		getContentPane().add(phone);
 		
 		JLabel lblTelephone = new JLabel("Telephone");
 		lblTelephone.setHorizontalAlignment(SwingConstants.CENTER);
@@ -140,8 +140,8 @@ public void hide() {
 		btnOk.setBounds(146, 197, 160, 53);
 		getContentPane().add(btnOk);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(220, 42, 86, 20);
-		getContentPane().add(passwordField);
+		password = new JPasswordField();
+		password.setBounds(220, 42, 86, 20);
+		getContentPane().add(password);
 	}
 }
