@@ -141,7 +141,7 @@ public void hide() {
 		lblTelephone.setBounds(50, 197, 160, 14);
 		getContentPane().add(lblTelephone);
 		
-		JButton btnOk = nscnew JButton("OK");
+		JButton btnOk = new JButton("OK");
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Quand le boutton OK est actionné
