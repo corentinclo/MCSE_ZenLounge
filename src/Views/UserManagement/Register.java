@@ -6,21 +6,31 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.GridLayout;
+
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.DropMode;
+
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Color;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Window.Type;
+import java.util.regex.Pattern;
+
 import javax.swing.JPasswordField;
+
+import BusinessLogic.Facades.UserManagement;
 
 public class Register extends JFrame implements Views.AbstractView {
 	private JTextField userName;
@@ -29,6 +39,7 @@ public class Register extends JFrame implements Views.AbstractView {
 	private JTextField mail;
 	private JTextField phone;
 	private JPasswordField password;
+	private JPasswordField password2;
 
 /**
  */
@@ -82,66 +93,94 @@ public void hide() {
 		
 		JLabel lblId = new JLabel("Username");
 		lblId.setHorizontalAlignment(SwingConstants.CENTER);
-		lblId.setBounds(146, 14, 64, 14);
+		lblId.setBounds(50, 14, 160, 14);
 		getContentPane().add(lblId);
 		
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPassword.setBounds(146, 45, 64, 14);
+		lblPassword.setBounds(50, 45, 160, 14);
 		getContentPane().add(lblPassword);
 		
 		firstName = new JTextField();
 		firstName.setColumns(10);
-		firstName.setBounds(220, 73, 86, 20);
+		firstName.setBounds(220, 101, 86, 20);
 		getContentPane().add(firstName);
 		
 		JLabel lblName = new JLabel("First name");
 		lblName.setHorizontalAlignment(SwingConstants.CENTER);
-		lblName.setBounds(146, 76, 64, 14);
+		lblName.setBounds(50, 104, 160, 14);
 		getContentPane().add(lblName);
 		
 		lastName = new JTextField();
 		lastName.setColumns(10);
-		lastName.setBounds(220, 104, 86, 20);
+		lastName.setBounds(220, 132, 86, 20);
 		getContentPane().add(lastName);
 		
 		JLabel lblLastName = new JLabel("Last name");
 		lblLastName.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLastName.setBounds(146, 107, 64, 14);
+		lblLastName.setBounds(50, 135, 160, 14);
 		getContentPane().add(lblLastName);
 		
 		mail = new JTextField();
 		mail.setColumns(10);
-		mail.setBounds(220, 135, 86, 20);
+		mail.setBounds(220, 163, 86, 20);
 		getContentPane().add(mail);
 		
 		JLabel lblEmail = new JLabel("E-mail");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEmail.setBounds(146, 138, 64, 14);
+		lblEmail.setBounds(50, 166, 160, 14);
 		getContentPane().add(lblEmail);
 		
 		phone = new JTextField();
 		phone.setColumns(10);
-		phone.setBounds(220, 166, 86, 20);
+		phone.setBounds(220, 194, 86, 20);
 		getContentPane().add(phone);
 		
 		JLabel lblTelephone = new JLabel("Telephone");
 		lblTelephone.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTelephone.setBounds(146, 169, 64, 14);
+		lblTelephone.setBounds(50, 197, 160, 14);
 		getContentPane().add(lblTelephone);
 		
-		JButton btnOk = new JButton("OK");
+		JButton btnOk = nscnew JButton("OK");
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Quand le boutton OK est actionné
-				
+				if(userName.getText().isEmpty() || lastName.getText().isEmpty() || firstName.getText().isEmpty() || mail.getText().isEmpty() || phone.getText().isEmpty() || password.getText().isEmpty() || password2.getText().isEmpty()){
+					//Si un champ n'est pas rempli
+					JOptionPane.showMessageDialog(null,"Please fill out all fields completely.","Inane warning",JOptionPane.WARNING_MESSAGE);
+				}
+				else if(!Pattern.matches("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)+$", mail.getText())){
+					//Regexp pour vérifier la validité du mail
+					JOptionPane.showMessageDialog(null,"Your email adress is not correct.","Inane warning",JOptionPane.WARNING_MESSAGE);
+				}
+				else if(!Pattern.matches("^[0-9]{10}", phone.getText())){
+					//Vérifier la validité du téléphone
+					JOptionPane.showMessageDialog(null,"Please enter your phone number like this : 0123456789.","Inane warning",JOptionPane.WARNING_MESSAGE);
+				}
+				else if(!password.getText().equals(password2.getText())){
+					//Vérifier que les mots de passes sont égauxs
+					JOptionPane.showMessageDialog(null,"Please match your passwords.","Inane warning",JOptionPane.WARNING_MESSAGE);
+				}
+				else{
+					//Tout va bien, on valide l'inscription
+					UserManagement.registerUser(userName.getText(), lastName.getText(), firstName.getText(), mail.getText(), phone.getText(), password.getText());
+				}
 			}
 		});
-		btnOk.setBounds(146, 197, 160, 53);
+		btnOk.setBounds(220, 228, 86, 32);
 		getContentPane().add(btnOk);
 		
 		password = new JPasswordField();
 		password.setBounds(220, 42, 86, 20);
 		getContentPane().add(password);
+		
+		JLabel lblConfirmPassword = new JLabel("Confirm password");
+		lblConfirmPassword.setHorizontalAlignment(SwingConstants.CENTER);
+		lblConfirmPassword.setBounds(50, 73, 160, 14);
+		getContentPane().add(lblConfirmPassword);
+		
+		password2 = new JPasswordField();
+		password2.setBounds(220, 70, 86, 20);
+		getContentPane().add(password2);
 	}
 }
