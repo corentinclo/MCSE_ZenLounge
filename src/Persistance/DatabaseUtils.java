@@ -13,10 +13,6 @@ public abstract class DatabaseUtils {
 	private final static String login = "mcse.zenlounge";
 	private final static String password = ProtectedConfigFile.getPassword(1);
 	
-	public static void main(String[] args) {
-		connexion();
-	}
-	
 	/**
  */
 	public static void connexion() {
