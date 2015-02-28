@@ -1,9 +1,11 @@
 package Views.UserManagement;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.regex.Pattern;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 import BusinessLogic.Facades.UserManagement;
 
@@ -19,6 +22,7 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 	 * 
 	 */
 	private static final long serialVersionUID = -4761385680424596264L;
+	private static final Color ERROR_COLOR = new Color(255,170,170);
 	private JTextField userNameUI;
 	private JTextField firstNameUI;
 	private JTextField lastNameUI;
@@ -134,6 +138,7 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 		
 	public void actionPerformed(ActionEvent arg0) {
 		// Quand le boutton OK est clické
+		resetBackground();
 		String id = userNameUI.getText();
 		String lastName = lastNameUI.getText();
 		String firstName = firstNameUI.getText();
@@ -150,12 +155,15 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 					"Inane warning", JOptionPane.WARNING_MESSAGE);
 		} else if (!Pattern.matches("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)+$",mail)) {
 			// Regexp pour vérifier la validité du mail
+			mailUI.setBackground(ERROR_COLOR);
+			mailUI.grabFocus();
 			JOptionPane.showMessageDialog(null,
 					"Your email adress is not correct.",
 					"Inane warning", JOptionPane.WARNING_MESSAGE);
-			mailUI.grabFocus();
 		} else if (!Pattern.matches("^[0-9]{10}", phone) && phone.length() != 10) {
 			// Vérifier la validité du téléphone
+			phoneUI.setBackground(ERROR_COLOR);
+			phoneUI.grabFocus();
 			JOptionPane.showMessageDialog(null,
 					"Please enter your phone number like this : 0123456789.",
 					"Inane warning", JOptionPane.WARNING_MESSAGE);
@@ -163,14 +171,27 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 		} else if (!password.equals(passVerif)) {
 			System.out.println(password + " : " + passVerif);
 			// Vérifier que les mots de passes sont égauxs
+			passwordUI.setBackground(ERROR_COLOR);
+			password2UI.setBackground(ERROR_COLOR);
+			passwordUI.grabFocus();
 			JOptionPane.showMessageDialog(null,
 					"Please match your passwords.", 
 					"Inane warning", JOptionPane.WARNING_MESSAGE);
-			passwordUI.grabFocus();
 		} else {
 			// Tout va bien, on valide l'inscription
 			UserManagement.registerUser(id,lastName, firstName, mail, phone, password);
 		}
 		passwordUI.setText("");
+		password2UI.setText("");
+	}
+	
+	private void resetBackground() {
+		userNameUI.setBackground(Color.WHITE);
+		firstNameUI.setBackground(Color.WHITE);
+		lastNameUI.setBackground(Color.WHITE);
+		mailUI.setBackground(Color.WHITE);
+		phoneUI.setBackground(Color.WHITE);
+		passwordUI.setBackground(Color.WHITE);
+		password2UI.setBackground(Color.WHITE);
 	}
 }
