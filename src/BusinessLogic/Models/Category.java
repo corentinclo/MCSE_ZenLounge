@@ -15,4 +15,17 @@ public class Category {
     public String getWordingCat() {        
         return wordingCat;
     } 
+    
+/**
+* 
+*/
+    public Category ()
+    {
+    	this("");
+    }
+
+    public Category(String aString) 
+	{
+    	wordingCat=aString;
+	}
  }

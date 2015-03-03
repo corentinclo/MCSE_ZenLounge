@@ -18,4 +18,17 @@ public class CommandState {
     public String getLibelState() {        
         return libelState;
     } 
+    
+    /**
+     * @return 
+     */
+    public CommandState ()
+    {
+    	this("");
+    }
+    
+    public CommandState (String aString)
+    {
+    	libelState=aString;
+    }
  }

@@ -15,7 +15,11 @@ public class Activite {
 
     //constructeur
     public Activite() {
-    	numAct=0;
+    	this(-1);
+    }
+    
+    public Activite(int aNum) {
+    	numAct=aNum;
     }
     
     //getter

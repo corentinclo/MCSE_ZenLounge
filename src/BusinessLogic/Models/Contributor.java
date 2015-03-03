@@ -27,6 +27,32 @@ public class Contributor extends BusinessLogic.Models.User {
     public String getAdressContrib() {        
         return adressContrib;
     } 
+    /**
+     * @return 
+     */
+    public Contributor(int aNum, String anAdress, String aTel, String aDesc)
+    {
+    	numContrib=aNum;
+    	adressContrib=anAdress;
+    	telContrib=aTel;
+    	descriptifContrib=aDesc;
+    }
+    
+    public Contributor()
+    {
+    	this(-1,"","","");
+    }
+    
+    /**
+     * @param aNum 
+     */
+    public Contributor(int aNum)
+    {
+    	numContrib=aNum;
+    	adressContrib="";
+    	telContrib="";
+    	descriptifContrib="";
+    }
 
 /**
  * @param _adressContrib 

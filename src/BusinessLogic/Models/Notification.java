@@ -32,6 +32,16 @@ public class Notification {
  */
     public java.util.Collection notificationCenter = new java.util.TreeSet();
 
+    //contructeurs
+    public Notification(int aNum)
+    {
+    	numNotif=aNum;
+    }
+    
+    public Notification ()
+    {
+    	this(-1);
+    }
 /**
  * @return 
  */

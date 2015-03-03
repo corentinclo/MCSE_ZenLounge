@@ -18,6 +18,15 @@ public class Member extends BusinessLogic.Models.User {
  */
     public BusinessLogic.Models.Product product;
 
+    public Member()
+    {
+    	numMember=0;
+    }
+    
+    public Member(int aNum)
+    {
+    	numMember=aNum;
+    }
 /**
  * @return 
  */

@@ -15,8 +15,12 @@ public class Accessory {
 /**
  * @return 
  */
+    public Accessory(int aNum)
+    {
+    	wordingAcc=aNum;
+    }
     public Accessory() {
-    	wordingAcc=0;
+    	this(-1);
     }
     
     public int getWordingAcc() {        
