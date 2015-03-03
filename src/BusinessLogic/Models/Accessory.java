@@ -7,7 +7,7 @@ public class Accessory {
 
 /**
  */
-    private final int wordingAcc;
+    private final String wordingAcc;
 /**
  */
     public java.util.Collection accessoryLine = new java.util.TreeSet();
@@ -15,7 +15,7 @@ public class Accessory {
 /**
  * @return 
  */
-    public int getWordingAcc() {        
+    public String getWordingAcc() {        
         return wordingAcc;
     } 
  }

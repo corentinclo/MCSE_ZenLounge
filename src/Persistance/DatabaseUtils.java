@@ -9,7 +9,7 @@ public abstract class DatabaseUtils {
 
 	private static Connection conn;
 	
-	private final static String server = "sql.free.fr";
+	private final static String server = "jdbc:postgresql://sql.free.fr:5432/mcse.zenlounge";
 	private final static String login = "mcse.zenlounge";
 	private final static String password = ProtectedConfigFile.getPassword(1);
 	
@@ -29,7 +29,7 @@ public abstract class DatabaseUtils {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
  */
 	public static void deconnexion() {
