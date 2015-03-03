@@ -14,7 +14,8 @@ public abstract class DatabaseUtils {
 	private final static String password = ProtectedConfigFile.getPassword(1);
 	
 	/**
- */
+	 * This is the database connection
+	 */
 	public static void connexion() {
 		
 		try {

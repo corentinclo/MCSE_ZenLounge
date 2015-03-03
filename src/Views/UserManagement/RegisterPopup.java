@@ -160,7 +160,7 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 			JOptionPane.showMessageDialog(null,
 					"Your email adress is not correct.",
 					"Inane warning", JOptionPane.WARNING_MESSAGE);
-		} else if (!Pattern.matches("^[0-9]{10}", phone) && phone.length() != 10) {
+		} else if (!Pattern.matches("^(\\+\\d{2}|0)\\d{9}", phone) && phone.length() != 10) {
 			// Vérifier la validité du téléphone
 			phoneUI.setBackground(ERROR_COLOR);
 			phoneUI.grabFocus();
