@@ -16,6 +16,16 @@ public class Year {
  */
     public java.util.Collection member = new java.util.TreeSet();
 
+    //constructeur 
+    public Year()
+    {
+    	this(-1);
+    }
+    
+    public Year(int aYear)
+    {
+    	year=aYear;
+    }
 /**
  * @return 
  */

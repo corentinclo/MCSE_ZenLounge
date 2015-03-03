@@ -16,7 +16,17 @@ public class TimeSlot {
 /**
  */
     private int durationSlot;
-
+//constructeur
+    public TimeSlot()
+    {
+    	this("",-1);
+    }
+    
+    public TimeSlot(String aDay, int aHour)
+    {
+    	daySlot=aDay;
+    	hourSlot=aHour;
+    }
 /**
  * @return 
  */

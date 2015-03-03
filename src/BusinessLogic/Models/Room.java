@@ -19,6 +19,16 @@ public abstract class Room {
  */
     public java.util.Collection accessoryLine = new java.util.TreeSet();
 
+    //constructeur
+    public Room()
+    {
+    	this(-1);
+    }
+    
+    public Room(int aNum)
+    {
+    	numRoom=aNum;
+    }
 /**
  * @return 
  */

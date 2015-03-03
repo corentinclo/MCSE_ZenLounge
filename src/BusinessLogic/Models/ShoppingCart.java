@@ -15,6 +15,16 @@ public class ShoppingCart {
  */
     public BusinessLogic.Models.User user;
 
+    //constructeur
+    public ShoppingCart()
+    {
+    	this(-1);
+    }
+    
+    public ShoppingCart(int aNum)
+    {
+    	numCart=aNum;
+    }
 /**
  * @return 
  */

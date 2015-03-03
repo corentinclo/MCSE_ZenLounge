@@ -74,6 +74,18 @@ public class User {
  */
     public java.util.Collection activite = new java.util.TreeSet();
 
+    //constructeur
+    
+    public User()
+    {
+    	this(-1,"","");
+    }
+    public User(int aNum, String aPrefix, String aSufix)
+    {
+    	numUser=aNum;
+    	prefixUser=aPrefix;
+    	sufixUser=aSufix;
+    }
 /**
  * @return 
  */

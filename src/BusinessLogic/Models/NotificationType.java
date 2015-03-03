@@ -11,7 +11,17 @@ public class NotificationType {
 /**
  */
     public java.util.Collection notification = new java.util.TreeSet();
-
+//constructeur
+    public NotificationType()
+    {
+    	this("");
+    }
+    
+    public NotificationType(String aWord)
+    {
+    	wordingNotifType=aWord;
+    }
+    
 /**
  * @return 
  */

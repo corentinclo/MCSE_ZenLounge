@@ -1,6 +1,8 @@
 
 package BusinessLogic.Models;
 
+import java.sql.Timestamp;
+
 /**
  */
 public class Order {
@@ -24,7 +26,16 @@ public class Order {
 /**
  */
     public java.util.Collection commandLine = new java.util.TreeSet();
-
+//constructeur
+    public Order()
+    {
+    	this(-1);
+    }
+    
+    public Order(int aNum)
+    {
+    	numOrder=aNum;
+    }
 /**
  * @return 
  */
@@ -35,14 +46,14 @@ public class Order {
 /**
  * @return 
  */
-    public TIMESTAMP getDate() {        
+    public Timestamp getDate() {        
         return date;
     } 
 
 /**
  * @param _date 
  */
-    public void setDate(TIMESTAMP _date) {        
+    public void setDate(Timestamp _date) {        
         date = _date;
     } 
  }
