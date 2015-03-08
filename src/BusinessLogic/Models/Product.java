@@ -29,7 +29,17 @@ public class Product extends BusinessLogic.Models.SubCategory {
 /**
  */
     public java.util.Collection member = new java.util.TreeSet();
-
+    
+//contructeur
+    public Product()
+    {
+    	this(-1);
+    }
+    
+    public Product(int aNum)
+    {
+    	numProduct=aNum;
+    }
 /**
  * @return 
  */

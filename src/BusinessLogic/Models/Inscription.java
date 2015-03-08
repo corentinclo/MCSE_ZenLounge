@@ -13,6 +13,16 @@ public class Inscription {
  */
     private String paymenMethodeIns;
 
+    //constructeur 
+    public Inscription()
+    {
+    	this(-1);
+    }
+    
+    public Inscription(int aNum)
+    {
+    	numIns=aNum;
+    }
 /**
  * @return 
  */

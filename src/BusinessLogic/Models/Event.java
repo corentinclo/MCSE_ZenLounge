@@ -26,6 +26,17 @@ public abstract class Event {
  */
     public java.util.Collection inscription = new java.util.TreeSet();
 
+    //constructeur
+    public Event ()
+    {
+    	this(-1,"");
+    }
+    
+    public Event (int aNum, String aWordingEvent)
+    {
+    	numEvent=aNum;
+    	wordingEvent=aWordingEvent;
+    }
 /**
  * @return 
  */
