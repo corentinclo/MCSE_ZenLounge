@@ -1,55 +1,28 @@
 
 package BusinessLogic.Models;
 
+import java.util.Collection;
+import java.util.TreeSet;
+
 /**
  */
 public class Manager extends BusinessLogic.Models.User {
 
-/**
- */
-    private final int numMan;
-
-/**
- */
     private final String adressMan;
-
-/**
- */
-    private final String telMan;
-/**
- */
-    public java.util.Collection activite = new java.util.TreeSet();
+    public Collection<Activite> activites = new TreeSet();
 
     //constructeur
-    public Manager()
-    {
-    	this(-1,"","");
-    }
-    
-    public Manager(int aNum, String anAdress, String aTel)
-    {
-    	numMan=aNum;
-    	adressMan=anAdress;
-    	telMan=aTel;
-    }
-/**
- * @return 
- */
-    public int getNumMan() {        
-        return numMan;
-    } 
+	public Manager(int num, String id, String lastName,
+			String firstName, String mail, String tel, String password,
+			String sufix, String prefix, String adress) {
+		super(num, id, lastName, firstName, mail, tel, password, sufix, prefix);
+		adressMan = adress;
+	}
 
 /**
  * @return 
  */
     public String getAdressMan() {        
         return adressMan;
-    } 
-
-/**
- * @return 
- */
-    public String getTelMan() {        
-        return telMan;
     } 
  }

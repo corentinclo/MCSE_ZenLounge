@@ -1,36 +1,21 @@
 
 package BusinessLogic.Models;
 
+import java.util.Collection;
+import java.util.TreeSet;
+
 /**
  */
 public class Member extends BusinessLogic.Models.User {
 
-/**
- */
-    private final int numMember;
-/**
- */
-    public java.util.Collection year = new java.util.TreeSet();
-/**
- */
-    public java.util.Collection inscription = new java.util.TreeSet();
-/**
- */
-    public BusinessLogic.Models.Product product;
+    public Collection<AdhesionYear> adhesionYears = new TreeSet();
+    public Collection<Event> eventsInscriptions = new TreeSet();
+    public Collection<Product> sellingProducts = new TreeSet();
 
-    public Member()
-    {
-    	numMember=0;
-    }
-    
-    public Member(int aNum)
-    {
-    	numMember=aNum;
-    }
-/**
- * @return 
- */
-    public int getNumMember() {        
-        return numMember;
-    } 
+    //constructeur
+	public Member(int num, String id, String lastName,
+			String firstName, String mail, String tel, String password,
+			String sufix, String prefix, String adress) {
+		super(num, id, lastName, firstName, mail, tel, password, sufix, prefix);
+	}
  }
