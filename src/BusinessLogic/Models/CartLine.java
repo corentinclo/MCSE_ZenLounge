@@ -3,7 +3,7 @@
 package BusinessLogic.Models;
 /**
  */
-public class CartLine {
+public class CartLine implements ModelIt{
 
 /**
  */
@@ -28,4 +28,16 @@ public class CartLine {
 /**
  */
     public BusinessLogic.Models.ShoppingCart shoppingCart;
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
  }

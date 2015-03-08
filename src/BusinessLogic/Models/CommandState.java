@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class CommandState {
+public class CommandState implements ModelIt{
 
 /**
  */
@@ -31,4 +31,17 @@ public class CommandState {
     {
     	libelState=aString;
     }
+
+	@Override
+	public boolean store() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean remove() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
  }

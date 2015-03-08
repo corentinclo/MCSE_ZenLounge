@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class PaymentType {
+public class PaymentType implements ModelIt{
 
 /**
  */
@@ -24,5 +24,19 @@ public class PaymentType {
  */
     public void setLibelPayment(String _libelPayment) {        
         libelPayment = _libelPayment;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+
  }

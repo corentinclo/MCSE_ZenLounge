@@ -3,7 +3,7 @@
 package BusinessLogic.Models;
 /**
  */
-public class Inscription {
+public class Inscription implements ModelIt{
 
 /**
  */
@@ -49,4 +49,16 @@ public class Inscription {
 /**
  */
     public BusinessLogic.Models.Member member;
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
  }

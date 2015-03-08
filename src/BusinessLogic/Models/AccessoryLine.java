@@ -3,7 +3,7 @@
 package BusinessLogic.Models;
 /**
  */
-public class AccessoryLine {
+public class AccessoryLine implements ModelIt{
 
 /**
  */
@@ -28,4 +28,19 @@ public class AccessoryLine {
 /**
  */
     public BusinessLogic.Models.Room room;
+
+@Override
+public boolean store() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public boolean remove() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
  }

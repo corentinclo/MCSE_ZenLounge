@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class EventType {
+public class EventType implements ModelIt{
 
 /**
  */
@@ -25,5 +25,18 @@ public class EventType {
  */
     public String getWordingType() {        
         return wordingType;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

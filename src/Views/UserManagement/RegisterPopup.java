@@ -59,7 +59,6 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
-		setVisible(true);
 
 		userNameUI = new JTextField();
 		userNameUI.setBounds(220, 11, 86, 20);
@@ -133,6 +132,8 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 		password2UI = new JPasswordField();
 		password2UI.setBounds(220, 70, 86, 20);
 		getContentPane().add(password2UI);
+		
+		setVisible(true);
 	}
 		
 		

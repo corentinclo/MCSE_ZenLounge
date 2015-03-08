@@ -3,7 +3,7 @@
 package BusinessLogic.Models;
 /**
  */
-public class CommandLine {
+public class CommandLine implements ModelIt{
 
 /**
  */
@@ -28,4 +28,17 @@ public class CommandLine {
 /**
  */
     public BusinessLogic.Models.Order order;
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

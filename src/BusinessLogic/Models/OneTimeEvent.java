@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 /**
  */
-public class OneTimeEvent extends BusinessLogic.Models.Event {
+public class OneTimeEvent extends Event implements ModelIt {
 
 /**
  */
@@ -41,4 +41,17 @@ public class OneTimeEvent extends BusinessLogic.Models.Event {
     public void setDateOTE(int _dateOTE) {
         dateOTE = _dateOTE;
     }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 /**
  */
-public class Member extends BusinessLogic.Models.User {
+public class Member extends User implements ModelIt {
 
     public Collection<AdhesionYear> adhesionYears = new TreeSet();
     public Collection<Event> eventsInscriptions = new TreeSet();

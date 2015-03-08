@@ -4,7 +4,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Notification {
+public class Notification implements ModelIt{
 
 /**
  */
@@ -82,5 +82,18 @@ public class Notification {
  */
     public void setMessageNotif(String _messageNotif) {        
         messageNotif = _messageNotif;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

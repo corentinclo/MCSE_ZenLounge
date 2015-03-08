@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 /**
  */
-public class Manager extends BusinessLogic.Models.User {
+public class Manager extends User implements ModelIt {
 
     private final String adressMan;
     public Collection<Activite> activites = new TreeSet();

@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Contributor extends BusinessLogic.Models.User {
+public class Contributor extends User implements ModelIt {
 
     private String adressContrib;
     private String descriptifContrib;

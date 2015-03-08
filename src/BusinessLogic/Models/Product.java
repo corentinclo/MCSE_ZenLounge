@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Product extends BusinessLogic.Models.SubCategory {
+public class Product extends Category implements ModelIt {
 
 /**
  */

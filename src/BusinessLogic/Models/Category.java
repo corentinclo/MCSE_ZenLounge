@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Category {
+public class Category implements ModelIt{
 
 /**
  */
@@ -27,5 +27,17 @@ public class Category {
     public Category(String aString) 
 	{
     	wordingCat=aString;
+	}
+
+	@Override
+	public boolean store() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean remove() {
+		// TODO Auto-generated method stub
+		return false;
 	}
  }

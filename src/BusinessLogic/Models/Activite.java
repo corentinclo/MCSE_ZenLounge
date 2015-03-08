@@ -1,7 +1,7 @@
 
 package BusinessLogic.Models;
 
-public class Activite {
+public class Activite implements ModelIt{
 
 
     private final int numAct;
@@ -57,5 +57,20 @@ public class Activite {
  */
     public void setLongDescAct(String _longDescAct) {        
         longDescAct = _longDescAct;
-    } 
+    }
+
+@Override
+public boolean store() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public boolean remove() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
  }

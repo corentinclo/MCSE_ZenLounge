@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 
 /**
  */
-public class Order {
+public class Order implements ModelIt{
 
 /**
  */
@@ -55,5 +55,19 @@ public class Order {
  */
     public void setDate(Timestamp _date) {        
         date = _date;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+
  }

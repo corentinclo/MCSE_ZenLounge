@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class NotificationType {
+public class NotificationType implements ModelIt{
 
 /**
  */
@@ -27,5 +27,18 @@ public class NotificationType {
  */
     public String getWordingNotifType() {        
         return wordingNotifType;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

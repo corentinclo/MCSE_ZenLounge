@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class ShoppingCart {
+public class ShoppingCart implements ModelIt{
 
 /**
  */
@@ -30,5 +30,18 @@ public class ShoppingCart {
  */
     public int getNumCart() {        
         return numCart;
-    } 
+    }
+
+@Override
+public boolean store() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean remove() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
  }

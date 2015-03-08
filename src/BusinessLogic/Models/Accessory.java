@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Accessory {
+public class Accessory implements ModelIt{
 
 /**
  */
@@ -25,5 +25,17 @@ public class Accessory {
     
     public int getWordingAcc() {        
         return wordingAcc;
-    } 
+    }
+	@Override
+	public boolean store() {
+		return false;
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean remove() {
+		return false;
+		// TODO Auto-generated method stub
+		
+	}
  }

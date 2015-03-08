@@ -3,7 +3,7 @@ package BusinessLogic.Models;
 
 /**
  */
-public class AdhesionYear {
+public class AdhesionYear implements ModelIt{
 
 /**
  */
@@ -30,5 +30,20 @@ public class AdhesionYear {
  */
     public void setAmountContribution(int _amountContribution) {        
         amountContribution = _amountContribution;
-    } 
+    }
+
+@Override
+public boolean store() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public boolean remove() {
+	return false;
+	// TODO Auto-generated method stub
+	
+}
+
  }

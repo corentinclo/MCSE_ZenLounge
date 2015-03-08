@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import Persistance.DatabaseUtils;
 import Views.UserManagement.RegisterPopup;
 import BusinessLogic.Facades.UserManagement;
+import BusinessLogic.Models.User;
 
 
 public class Main {
@@ -22,5 +23,6 @@ public class Main {
 //			}
 //		});
 		DatabaseUtils.connexion();
+		DatabaseUtils.selectOne(User.class, 1);
 	}
 }
