@@ -7,6 +7,8 @@ import java.security.SecureRandom;
 import java.util.Collection;
 import java.util.TreeSet;
 
+import BusinessLogic.Facades.NotificationCenter;
+
 /**
  * @author florent
  *

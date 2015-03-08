@@ -3,18 +3,13 @@ package BusinessLogic.Models;
 
 /**
  */
-public class Year {
+public class AdhesionYear {
 
 /**
  */
-    private final int year;
-
-/**
- */
+	private Member member; 
+    private int year;
     private int amountContribution;
-/**
- */
-    public java.util.Collection member = new java.util.TreeSet();
 
 /**
  * @return 

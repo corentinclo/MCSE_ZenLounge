@@ -9,27 +9,13 @@ public class Notification {
 /**
  */
     private final int numNotif;
-
-/**
- */
     private java.sql.Timestamp sendDateNotif;
-
-/**
- */
     private java.sql.Timestamp recepDateNotif;
-
-/**
- */
     private String objectNotif;
-
-/**
- */
     private String messageNotif;
-/**
- */
+    private User receiver;
     public BusinessLogic.Models.NotificationType notificationType;
-/**
- */
+
     public java.util.Collection notificationCenter = new java.util.TreeSet();
 
 /**
