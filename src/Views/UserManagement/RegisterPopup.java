@@ -17,32 +17,58 @@ import javax.swing.border.Border;
 
 import BusinessLogic.Facades.UserManagement;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RegisterPopup.
+ */
 public class RegisterPopup extends JFrame implements Views.AbstractView, ActionListener {
-	/**
-	 * 
-	 */
+	
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -4761385680424596264L;
+	
+	/** The Constant ERROR_COLOR. */
 	private static final Color ERROR_COLOR = new Color(255,170,170);
+	
+	/** The user name ui. */
 	private JTextField userNameUI;
+	
+	/** The first name ui. */
 	private JTextField firstNameUI;
+	
+	/** The last name ui. */
 	private JTextField lastNameUI;
+	
+	/** The mail ui. */
 	private JTextField mailUI;
+	
+	/** The phone ui. */
 	private JTextField phoneUI;
+	
+	/** The password ui. */
 	private JPasswordField passwordUI;
+	
+	/** The password2 ui. */
 	private JPasswordField password2UI;
 
 	/**
- */
+	 * Validation.
+	 */
 	public void validation() {
 		// your code here
 	}
 
+	/* (non-Javadoc)
+	 * @see Views.AbstractView#display()
+	 */
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub
 
 	}
 
+	/* (non-Javadoc)
+	 * @see java.awt.Window#hide()
+	 */
 	@Override
 	public void hide() {
 		// TODO Auto-generated method stub
@@ -50,7 +76,7 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 	}
 
 	/**
-	 * Create the frame.
+	 * Instantiates a new register popup.
 	 */
 	public RegisterPopup() {
 		setResizable(false);
@@ -137,6 +163,9 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 	}
 		
 		
+	/* (non-Javadoc)
+	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+	 */
 	public void actionPerformed(ActionEvent arg0) {
 		// Quand le boutton OK est clické
 		resetBackground();
@@ -186,6 +215,9 @@ public class RegisterPopup extends JFrame implements Views.AbstractView, ActionL
 		password2UI.setText("");
 	}
 	
+	/**
+	 * Reset background.
+	 */
 	private void resetBackground() {
 		userNameUI.setBackground(Color.WHITE);
 		firstNameUI.setBackground(Color.WHITE);
