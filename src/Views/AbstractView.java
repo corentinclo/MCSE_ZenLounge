@@ -1,21 +1,19 @@
 
 package Views;
+// TODO: Auto-generated Javadoc
+
 /**
- * 
- * 
- * @poseidon-object-id [Im498b6231m14ba65b5012mm576b]
+ * The Interface AbstractView.
  */
 public interface AbstractView {
+
 /**
- * <p>Does ...</p>
- * 
- * @poseidon-object-id [Im498b6231m14ba65b5012mm5732]
+ * Display.
  */
     public void display();
+
 /**
- * <p>Does ...</p>
- * 
- * @poseidon-object-id [Im498b6231m14ba65b5012mm570d]
+ * Hide.
  */
     public void hide();
 }

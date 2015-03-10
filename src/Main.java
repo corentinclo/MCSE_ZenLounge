@@ -1,15 +1,23 @@
-import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Set;
+import java.util.TreeSet;
 
-import Persistance.DatabaseUtils;
-import Views.UserManagement.RegisterPopup;
-import BusinessLogic.Facades.UserManagement;
+import BusinessLogic.Models.ModelIt;
 import BusinessLogic.Models.User;
+import Persistance.DatabaseUtils;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Main.
+ */
 public class Main {
 	
 	/**
-	 * Launch the application.
+	 * The main method.
+	 *
+	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
 //		EventQueue.invokeLater(new Runnable() {
@@ -23,6 +31,11 @@ public class Main {
 //			}
 //		});
 		DatabaseUtils.connexion();
-		DatabaseUtils.selectOne(User.class, 1);
+		Hashtable<String, String> titi = new Hashtable<String, String>();
+		titi.put("firstNameUser", "Florent");
+		ArrayList<ModelIt> test = DatabaseUtils.selectMany(User.class, titi);
+		for (int i = 0; i < test.size(); i++)
+			test.get(i).store();
+		
 	}
 }

@@ -15,14 +15,27 @@ import javax.crypto.spec.PBEParameterSpec;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ProtectedConfigFile.
+ */
 public class ProtectedConfigFile {
 
+    /** The Constant PASSWORD. */
     private static final char[] PASSWORD = "Un mot de passe d'enfer !".toCharArray();
+    
+    /** The Constant SALT. */
     private static final byte[] SALT = {
         (byte) 0xde, (byte) 0x33, (byte) 0x10, (byte) 0x12,
         (byte) 0xde, (byte) 0x33, (byte) 0x10, (byte) 0x12,
     };
 
+    /**
+     * Gets the password.
+     *
+     * @param number the number
+     * @return the password
+     */
     public static String getPassword(int number) {
     	String decryptedPassword = null;
 		try (BufferedReader br = new BufferedReader(new FileReader("passwd")))
@@ -39,6 +52,14 @@ public class ProtectedConfigFile {
 		return decryptedPassword;
     }
 
+    /**
+     * Encrypt.
+     *
+     * @param property the property
+     * @return the string
+     * @throws GeneralSecurityException the general security exception
+     * @throws UnsupportedEncodingException the unsupported encoding exception
+     */
     private static String encrypt(String property) throws GeneralSecurityException, UnsupportedEncodingException {
         SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
         SecretKey key = keyFactory.generateSecret(new PBEKeySpec(PASSWORD));
@@ -47,11 +68,25 @@ public class ProtectedConfigFile {
         return base64Encode(pbeCipher.doFinal(property.getBytes("UTF-8")));
     }
 
+    /**
+     * Base64 encode.
+     *
+     * @param bytes the bytes
+     * @return the string
+     */
     private static String base64Encode(byte[] bytes) {
         // NB: This class is internal, and you probably should use another impl
         return new BASE64Encoder().encode(bytes);
     }
 
+    /**
+     * Decrypt.
+     *
+     * @param property the property
+     * @return the string
+     * @throws GeneralSecurityException the general security exception
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     private static String decrypt(String property) throws GeneralSecurityException, IOException {
         SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
         SecretKey key = keyFactory.generateSecret(new PBEKeySpec(PASSWORD));
@@ -60,6 +95,13 @@ public class ProtectedConfigFile {
         return new String(pbeCipher.doFinal(base64Decode(property)), "UTF-8");
     }
 
+    /**
+     * Base64 decode.
+     *
+     * @param property the property
+     * @return the byte[]
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     private static byte[] base64Decode(String property) throws IOException {
         // NB: This class is internal, and you probably should use another impl
         return new BASE64Decoder().decodeBuffer(property);
