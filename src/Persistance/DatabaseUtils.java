@@ -37,13 +37,13 @@ public abstract class DatabaseUtils {
 	private static ResultSet rs = null;
 
 	/** The Constant server. */
-	private final static String server = "jdbc:postgresql://mcse.heliohost.org:5432/mcse_zenlounge";
+	private static String server = "jdbc:postgresql://mcse.heliohost.org:5432/mcse_zenlounge";
 	
 	/** The Constant login. */
-	private final static String login = "mcse";
+	private static String login = "mcse";
 	
 	/** The Constant password. */
-	private final static String password = ProtectedConfigFile.getPassword(1);
+	private static String password = ProtectedConfigFile.getPassword(1);
 
 	/**
 	 * Connexion.

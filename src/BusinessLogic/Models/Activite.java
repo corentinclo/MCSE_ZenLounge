@@ -9,7 +9,7 @@ public class Activite implements ModelIt{
 
 
     /** The num act. */
-    private final int numAct;
+    private int numAct;
     
     /** The nom acti. */
     private String nomActi;

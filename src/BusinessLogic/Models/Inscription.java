@@ -9,7 +9,7 @@ package BusinessLogic.Models;
 public class Inscription implements ModelIt{
 
 /** The num ins. */
-    private final int numIns;
+    private int numIns;
 
 /** The paymen methode ins. */
     private String paymenMethodeIns;

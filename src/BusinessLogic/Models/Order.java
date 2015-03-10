@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 public class Order implements ModelIt{
 
 /** The num order. */
-    private final int numOrder;
+    private int numOrder;
 
 /** The date. */
     private java.sql.Timestamp date;

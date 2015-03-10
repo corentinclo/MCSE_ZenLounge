@@ -24,10 +24,10 @@ import BusinessLogic.Facades.UserManagement;
 public class RegisterPopup extends JFrame implements Views.AbstractView, ActionListener {
 	
 	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = -4761385680424596264L;
+	private static long serialVersionUID = -4761385680424596264L;
 	
 	/** The Constant ERROR_COLOR. */
-	private static final Color ERROR_COLOR = new Color(255,170,170);
+	private static Color ERROR_COLOR = new Color(255,170,170);
 	
 	/** The user name ui. */
 	private JTextField userNameUI;

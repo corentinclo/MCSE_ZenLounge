@@ -8,36 +8,31 @@ package BusinessLogic.Models;
 public class CommandState implements ModelIt{
 
 /** The libel state. */
-    private final String libelState;
+	private int numState;
+    private String wordingState;
 
 /** The order. */
     public java.util.Collection order = new java.util.TreeSet();
 
-/**
- * Gets the libel state.
- *
- * @return the libel state
- */
-    public String getLibelState() {        
-        return libelState;
-    } 
-    
+
     /**
      * Instantiates a new command state.
      */
     public CommandState ()
     {
-    	this("");
+    	this(-1,"");
     }
     
     /**
      * Instantiates a new command state.
      *
      * @param aString the a string
+     * @param aNum the number of the command state
      */
-    public CommandState (String aString)
+    public CommandState (int aNum, String aString)
     {
-    	libelState=aString;
+    	numState=aNum;
+    	wordingState=aString;
     }
 
 	/* (non-Javadoc)
@@ -56,6 +51,22 @@ public class CommandState implements ModelIt{
 	public boolean remove() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public String getWordingState() {
+		return wordingState;
+	}
+
+	public void setWordingState(String wordingState) {
+		this.wordingState = wordingState;
+	}
+
+	public int getNumState() {
+		return numState;
+	}
+
+	public void setNumState(int numState) {
+		this.numState = numState;
 	}
 
  }

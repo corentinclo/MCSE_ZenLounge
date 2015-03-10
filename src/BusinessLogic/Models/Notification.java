@@ -9,7 +9,7 @@ package BusinessLogic.Models;
 public class Notification implements ModelIt{
 
 /** The num notif. */
-    private final int numNotif;
+    private int numNotif;
     
     /** The send date notif. */
     private java.sql.Timestamp sendDateNotif;

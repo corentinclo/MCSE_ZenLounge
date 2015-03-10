@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public class ShoppingCart implements ModelIt{
 
 /** The num cart. */
-    private final int numCart;
+    private int numCart;
 
 /** The cart line. */
     public java.util.Collection cartLine = new java.util.TreeSet();

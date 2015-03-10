@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public class EventType implements ModelIt{
 
 /** The wording type. */
-    private final String wordingType;
+    private String wordingType;
 
     //constructeur 
     /**

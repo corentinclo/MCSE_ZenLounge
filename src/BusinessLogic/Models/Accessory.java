@@ -8,7 +8,9 @@ package BusinessLogic.Models;
 public class Accessory implements ModelIt{
 
 /** The wording acc. */
-    private final int wordingAcc;
+	private int numAccessory;
+    private String wordingAcc;
+    
 
 /** The accessory line. */
     public java.util.Collection accessoryLine = new java.util.TreeSet();
@@ -20,7 +22,7 @@ public class Accessory implements ModelIt{
  */
     public Accessory(int aNum)
     {
-    	wordingAcc=aNum;
+    	setNumAccessory(aNum);
     }
     
     /**
@@ -35,7 +37,7 @@ public class Accessory implements ModelIt{
      *
      * @return the wording acc
      */
-    public int getWordingAcc() {        
+    public String getWordingAcc() {        
         return wordingAcc;
     }
 	
@@ -57,5 +59,17 @@ public class Accessory implements ModelIt{
 		return false;
 		// TODO Auto-generated method stub
 		
+	}
+
+	public int getNumAccessory() {
+		return numAccessory;
+	}
+
+	public void setNumAccessory(int numAccessory) {
+		this.numAccessory = numAccessory;
+	}
+
+	public void setWordingAcc(String wordingAcc) {
+		this.wordingAcc = wordingAcc;
 	}
  }

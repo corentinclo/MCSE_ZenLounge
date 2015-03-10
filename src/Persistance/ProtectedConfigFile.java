@@ -22,10 +22,10 @@ import sun.misc.BASE64Encoder;
 public class ProtectedConfigFile {
 
     /** The Constant PASSWORD. */
-    private static final char[] PASSWORD = "Un mot de passe d'enfer !".toCharArray();
+    private static char[] PASSWORD = "Un mot de passe d'enfer !".toCharArray();
     
     /** The Constant SALT. */
-    private static final byte[] SALT = {
+    private static byte[] SALT = {
         (byte) 0xde, (byte) 0x33, (byte) 0x10, (byte) 0x12,
         (byte) 0xde, (byte) 0x33, (byte) 0x10, (byte) 0x12,
     };

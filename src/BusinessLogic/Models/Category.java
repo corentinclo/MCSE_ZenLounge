@@ -8,7 +8,8 @@ package BusinessLogic.Models;
 public class Category implements ModelIt{
 
 /** The wording cat. */
-    private final String wordingCat;
+	private int numCategory;
+    private String wordingCat;
 
 /**
  * Gets the wording cat.
@@ -24,7 +25,7 @@ public class Category implements ModelIt{
  */
     public Category ()
     {
-    	this("");
+    	this(-1,"");
     }
 
     /**
@@ -32,8 +33,9 @@ public class Category implements ModelIt{
      *
      * @param aString the a string
      */
-    public Category(String aString) 
+    public Category(int aNum,String aString) 
 	{
+    	numCategory=aNum;
     	wordingCat=aString;
 	}
 
@@ -53,5 +55,13 @@ public class Category implements ModelIt{
 	public boolean remove() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public int getNumCategory() {
+		return numCategory;
+	}
+
+	public void setNumCategory(int numCategory) {
+		this.numCategory = numCategory;
 	}
  }

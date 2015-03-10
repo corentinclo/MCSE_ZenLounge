@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public abstract class Room {
 
 /** The num room. */
-    private final int numRoom;
+    private int numRoom;
 
 /** The room area. */
     private float roomArea;

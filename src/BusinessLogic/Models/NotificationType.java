@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public class NotificationType implements ModelIt{
 
 /** The wording notif type. */
-    private final String wordingNotifType;
+    private String wordingNotifType;
 
 /** The notification. */
     public java.util.Collection notification = new java.util.TreeSet();

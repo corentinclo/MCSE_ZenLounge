@@ -11,7 +11,7 @@ import java.util.TreeSet;
 public class Manager extends User implements ModelIt {
 
     /** The adress man. */
-    private final String adressMan;
+    private String adressMan;
     
     /** The activites. */
     public Collection<Activite> activites = new TreeSet();

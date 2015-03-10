@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public class Product extends Category implements ModelIt {
 
 /** The num product. */
-    private final int numProduct;
+    private int numProduct;
 
 /** The libel product. */
     private String libelProduct;

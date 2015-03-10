@@ -8,7 +8,7 @@ package BusinessLogic.Models;
 public abstract class Event {
 
 /** The num event. */
-    private final int numEvent;
+    private int numEvent;
 
 /** The wording event. */
     private String wordingEvent;
